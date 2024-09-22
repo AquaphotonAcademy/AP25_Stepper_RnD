@@ -1,0 +1,21 @@
+[2.856s] Invoking command in '/home/habibashaker/AP25_Stepper_RnD/src/stepper_pkg': PYTHONPATH=/home/habibashaker/AP25_Stepper_RnD/build/stepper_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/habibashaker/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/stepper_pkg build --build-base /home/habibashaker/AP25_Stepper_RnD/build/stepper_pkg/build install --record /home/habibashaker/AP25_Stepper_RnD/build/stepper_pkg/install.log --single-version-externally-managed install_data
+[3.925s] running egg_info
+[3.928s] writing ../../build/stepper_pkg/stepper_pkg.egg-info/PKG-INFO
+[3.930s] writing dependency_links to ../../build/stepper_pkg/stepper_pkg.egg-info/dependency_links.txt
+[3.931s] writing entry points to ../../build/stepper_pkg/stepper_pkg.egg-info/entry_points.txt
+[3.932s] writing requirements to ../../build/stepper_pkg/stepper_pkg.egg-info/requires.txt
+[3.932s] writing top-level names to ../../build/stepper_pkg/stepper_pkg.egg-info/top_level.txt
+[3.938s] reading manifest file '../../build/stepper_pkg/stepper_pkg.egg-info/SOURCES.txt'
+[3.942s] writing manifest file '../../build/stepper_pkg/stepper_pkg.egg-info/SOURCES.txt'
+[3.943s] running build
+[3.943s] running build_py
+[3.944s] running install
+[3.945s] running install_lib
+[3.951s] running install_data
+[3.952s] running install_egg_info
+[3.960s] removing '/home/habibashaker/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages/stepper_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[3.961s] Copying ../../build/stepper_pkg/stepper_pkg.egg-info to /home/habibashaker/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages/stepper_pkg-0.0.0-py3.10.egg-info
+[3.967s] running install_scripts
+[4.047s] Installing stepper_command script to /home/habibashaker/AP25_Stepper_RnD/install/stepper_pkg/lib/stepper_pkg
+[4.048s] writing list of installed files to '/home/habibashaker/AP25_Stepper_RnD/build/stepper_pkg/install.log'
+[4.138s] Invoked command in '/home/habibashaker/AP25_Stepper_RnD/src/stepper_pkg' returned '0': PYTHONPATH=/home/habibashaker/AP25_Stepper_RnD/build/stepper_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/habibashaker/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/stepper_pkg build --build-base /home/habibashaker/AP25_Stepper_RnD/build/stepper_pkg/build install --record /home/habibashaker/AP25_Stepper_RnD/build/stepper_pkg/install.log --single-version-externally-managed install_data

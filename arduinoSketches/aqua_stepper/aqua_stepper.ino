@@ -72,14 +72,18 @@ void homeMotor() {
 }
 
 // ROS 2 subscription callback
-void subscription_callback(const void *msgin) { //for absolute movement 
+void subscription_callback(const void *msgin) {
   const std_msgs__msg__Int32 *msg = (const std_msgs__msg__Int32 *)msgin;
   if (homing_state) {  // Only move if homing is complete
-    target_position = msg->data;  // Set the new target position in degrees
-    target_steps = degToSteps(target_position);  // Convert degrees to steps
-    aquaStepper.moveTo(target_steps); // Move stepper to target steps
+    long new_position = msg->data;  // Get the new position in degrees
+    target_position = current_position + new_position;  // Add new position to current position
+    target_steps = degToSteps(target_position);  // Convert total degrees to steps
+    aquaStepper.moveTo(target_steps);  // Move stepper to the new total target
+    current_position = target_position;
   }
 }
+  
+
 
 void setup() {
   // Initialize micro-ROS
@@ -135,16 +139,12 @@ void loop() {
 
 
 // // ROS 2 subscription callback (for relative movement)
-// void subscription_callback(const void *msgin) {
-//   const std_msgs__msg__Int32 *msg = (const std_msgs__msg__Int32 *)msgin;
-//   if (homing_state) {  // Only move if homing is complete
-//     long new_position = msg->data;  // Get the new position in degrees
-//     target_position = current_position + new_position;  // Add new position to current position
-//     target_steps = degToSteps(target_position);  // Convert total degrees to steps
-//     aquaStepper.moveTo(target_steps);  // Move stepper to the new total target
-//     current_position = target_position;
-//   }
-// }
+// const std_msgs__msg__Int32 *msg = (const std_msgs__msg__Int32 *)msgin;
+  // if (homing_state) {  // Only move if homing is complete
+  //   target_position = msg->data;  // Set the new target position in degrees
+  //   target_steps = degToSteps(target_position);  // Convert degrees to steps
+  //   aquaStepper.moveTo(target_steps); // Move stepper to target steps
+  // }
 
 
 
