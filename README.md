@@ -2,11 +2,6 @@
 
 ## Control Stepper motor movement 
 
-<<<<<<< HEAD
-### Basic Overview 
-
-This project controls stepper 
-=======
 
 ### About The Project 
 
