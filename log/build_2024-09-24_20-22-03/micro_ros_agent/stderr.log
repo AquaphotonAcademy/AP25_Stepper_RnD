@@ -1,0 +1,39 @@
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_manager.cpp:[m[K In member function ‘[01m[Kvoid uros::agent::graph_manager::GraphManager::add_datawriter(const eprosima::fastrtps::rtps::GUID_t&, const string&, const string&, const eprosima::fastrtps::rtps::GUID_t&, const eprosima::fastdds::dds::DataWriterQos&)[m[K’:
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_manager.cpp:378:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krosidl_get_zero_initialized_type_hash[m[K’ was not declared in this scope; did you mean ‘[01m[Krcutils_get_zero_initialized_hash_map[m[K’?
+  378 |         [01;31m[Krosidl_get_zero_initialized_type_hash[m[K(), participant_gid, qos_profile, false);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |         [32m[Krcutils_get_zero_initialized_hash_map[m[K
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_manager.cpp:[m[K In member function ‘[01m[Kvoid uros::agent::graph_manager::GraphManager::add_datareader(const eprosima::fastrtps::rtps::GUID_t&, const string&, const string&, const eprosima::fastrtps::rtps::GUID_t&, const eprosima::fastdds::dds::DataReaderQos&)[m[K’:
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_manager.cpp:420:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krosidl_get_zero_initialized_type_hash[m[K’ was not declared in this scope; did you mean ‘[01m[Krcutils_get_zero_initialized_hash_map[m[K’?
+  420 |         [01;31m[Krosidl_get_zero_initialized_type_hash[m[K(), participant_gid, qos_profile, true);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |         [32m[Krcutils_get_zero_initialized_hash_map[m[K
+gmake[2]: *** [CMakeFiles/micro_ros_agent.dir/build.make:104: CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_manager.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:[m[K In member function ‘[01m[Kvirtual bool uros::agent::graph_manager::ParticipantEntitiesInfoTypeSupport::serialize(void*, eprosima::fastrtps::rtps::SerializedPayload_t*)[m[K’:
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:57:28:[m[K [01;31m[Kerror: [m[K‘[01m[KDDS_CDR[m[K’ is not a member of ‘[01m[Keprosima::fastcdr[m[K’
+   57 |         eprosima::fastcdr::[01;31m[KDDS_CDR[m[K);
+      |                            [01;31m[K^~~~~~~[m[K
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:64:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass eprosima::fastcdr::Cdr[m[K’ has no member named ‘[01m[Kget_serialized_data_length[m[K’; did you mean ‘[01m[KgetSerializedDataLength[m[K’?
+   64 |         payload->length = static_cast<uint32_t>(scdr.[01;31m[Kget_serialized_data_length[m[K());
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[KgetSerializedDataLength[m[K
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:[m[K In member function ‘[01m[Kvirtual bool uros::agent::graph_manager::ParticipantEntitiesInfoTypeSupport::deserialize(eprosima::fastrtps::rtps::SerializedPayload_t*, void*)[m[K’:
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:80:28:[m[K [01;31m[Kerror: [m[K‘[01m[KDDS_CDR[m[K’ is not a member of ‘[01m[Keprosima::fastcdr[m[K’
+   80 |         eprosima::fastcdr::[01;31m[KDDS_CDR[m[K);
+      |                            [01;31m[K^~~~~~~[m[K
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:[m[K In member function ‘[01m[Kvirtual bool uros::agent::graph_manager::MicrorosGraphInfoTypeSupport::serialize(void*, eprosima::fastrtps::rtps::SerializedPayload_t*)[m[K’:
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:149:28:[m[K [01;31m[Kerror: [m[K‘[01m[KDDS_CDR[m[K’ is not a member of ‘[01m[Keprosima::fastcdr[m[K’
+  149 |         eprosima::fastcdr::[01;31m[KDDS_CDR[m[K);
+      |                            [01;31m[K^~~~~~~[m[K
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:156:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass eprosima::fastcdr::Cdr[m[K’ has no member named ‘[01m[Kget_serialized_data_length[m[K’; did you mean ‘[01m[KgetSerializedDataLength[m[K’?
+  156 |         payload->length = static_cast<uint32_t>(scdr.[01;31m[Kget_serialized_data_length[m[K());
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[KgetSerializedDataLength[m[K
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:[m[K In member function ‘[01m[Kvirtual bool uros::agent::graph_manager::MicrorosGraphInfoTypeSupport::deserialize(eprosima::fastrtps::rtps::SerializedPayload_t*, void*)[m[K’:
+[01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:172:28:[m[K [01;31m[Kerror: [m[K‘[01m[KDDS_CDR[m[K’ is not a member of ‘[01m[Keprosima::fastcdr[m[K’
+  172 |         eprosima::fastcdr::[01;31m[KDDS_CDR[m[K);
+      |                            [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/micro_ros_agent.dir/build.make:118: CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_typesupport.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/micro_ros_agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

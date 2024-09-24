@@ -27,7 +27,8 @@ rcl_node_t node;
 #define home_switch 9
 
 #define steps 200  // Steps per revolution for the motor (360/1.8 degrees)
-#define LED_PIN 13
+
+// #define LED_PIN 13
 
 // Motor position and homing state
 long current_position = 0;   // Current position in steps
@@ -37,16 +38,17 @@ bool homing_state = false;   // Homing state
 
 
 // RCCHECK macro to check return values
-#define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if ((temp_rc != RCL_RET_OK)) { error_loop(); } }
-#define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if ((temp_rc != RCL_RET_OK)) {} }
+// #define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if ((temp_rc != RCL_RET_OK)) { error_loop(); } }
+// #define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if ((temp_rc != RCL_RET_OK)) {} }
 
 // Function to handle errors
-void error_loop() {
-  while (1) {
-    digitalWrite(LED_PIN, !digitalRead(LED_PIN));
-    delay(100);
-  }
-}
+// void error_loop() {
+//   while (1) {
+//     digitalWrite(LED_PIN, !digitalRead(LED_PIN));
+//     delay(100);
+//   }
+// }
+
 
 // Function to convert degrees to steps
 long degToSteps(long degrees) {
@@ -91,7 +93,7 @@ void setup() {
 
   // Pin setup
   pinMode(home_switch, INPUT_PULLUP);  // Setup home switch pin
-  pinMode(LED_PIN, OUTPUT);
+  // pinMode(LED_PIN, OUTPUT);
 
   // Stepper motor setup
   aquaStepper.setMaxSpeed(1000);
@@ -101,22 +103,22 @@ void setup() {
   allocator = rcl_get_default_allocator();
 
   // Create init options
-  RCCHECK(rclc_support_init(&support, 0, NULL, &allocator));
+  rclc_support_init(&support, 0, NULL, &allocator);
 
   // Create node
-  RCCHECK(rclc_node_init_default(&node, "micro_ros_arduino_node", "", &support));
+  rclc_node_init_default(&node, "micro_ros_arduino_node", "", &support);
 
   // Create subscriber
-  RCCHECK(rclc_subscription_init_default(
+  rclc_subscription_init_default(
     &subscriber,
     &node,
     ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
     "stepper_control"
-  ));
+  );
 
   // Create executor
-  RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
-  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber, &msg, &subscription_callback, ON_NEW_DATA));
+  rclc_executor_init(&executor, &support.context, 1, &allocator);
+  rclc_executor_add_subscription(&executor, &subscriber, &msg, &subscription_callback, ON_NEW_DATA);
 
   // Start homing process
   homeMotor();
@@ -124,7 +126,7 @@ void setup() {
 
 void loop() {
   // Spin executor to process any incoming messages
-  RCCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
+  rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
 
   // Continue homing process if not completed
   if (!homing_state) {
@@ -138,7 +140,7 @@ void loop() {
 }
 
 
-// // ROS 2 subscription callback (for relative movement)
+// // ROS 2 subscription callback (for absolute movement)
 // const std_msgs__msg__Int32 *msg = (const std_msgs__msg__Int32 *)msgin;
   // if (homing_state) {  // Only move if homing is complete
   //   target_position = msg->data;  // Set the new target position in degrees

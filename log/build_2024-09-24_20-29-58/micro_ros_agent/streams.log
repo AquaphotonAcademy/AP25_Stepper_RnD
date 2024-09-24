@@ -1,0 +1,44 @@
+[0.054s] Invoking command in '/home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all:/home/habibashaker/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent -- -j2 -l2
+[0.236s] [35m[1mConsolidate compiler generated dependencies of target micro_ros_agent[0m
+[0.373s] [ 16%] [32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_manager.cpp.o[0m
+[0.382s] [ 33%] [32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_typesupport.cpp.o[0m
+[6.445s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:[m[K In member function ‘[01m[Kvirtual bool uros::agent::graph_manager::ParticipantEntitiesInfoTypeSupport::serialize(void*, eprosima::fastrtps::rtps::SerializedPayload_t*)[m[K’:
+[6.447s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:57:28:[m[K [01;31m[Kerror: [m[K‘[01m[KDDS_CDR[m[K’ is not a member of ‘[01m[Keprosima::fastcdr[m[K’
+[6.447s]    57 |         eprosima::fastcdr::[01;31m[KDDS_CDR[m[K);
+[6.448s]       |                            [01;31m[K^~~~~~~[m[K
+[6.455s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:64:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass eprosima::fastcdr::Cdr[m[K’ has no member named ‘[01m[Kget_serialized_data_length[m[K’; did you mean ‘[01m[KgetSerializedDataLength[m[K’?
+[6.456s]    64 |         payload->length = static_cast<uint32_t>(scdr.[01;31m[Kget_serialized_data_length[m[K());
+[6.456s]       |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.462s]       |                                                      [32m[KgetSerializedDataLength[m[K
+[6.463s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:[m[K In member function ‘[01m[Kvirtual bool uros::agent::graph_manager::ParticipantEntitiesInfoTypeSupport::deserialize(eprosima::fastrtps::rtps::SerializedPayload_t*, void*)[m[K’:
+[6.463s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:80:28:[m[K [01;31m[Kerror: [m[K‘[01m[KDDS_CDR[m[K’ is not a member of ‘[01m[Keprosima::fastcdr[m[K’
+[6.464s]    80 |         eprosima::fastcdr::[01;31m[KDDS_CDR[m[K);
+[6.464s]       |                            [01;31m[K^~~~~~~[m[K
+[6.492s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:[m[K In member function ‘[01m[Kvirtual bool uros::agent::graph_manager::MicrorosGraphInfoTypeSupport::serialize(void*, eprosima::fastrtps::rtps::SerializedPayload_t*)[m[K’:
+[6.492s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:149:28:[m[K [01;31m[Kerror: [m[K‘[01m[KDDS_CDR[m[K’ is not a member of ‘[01m[Keprosima::fastcdr[m[K’
+[6.497s]   149 |         eprosima::fastcdr::[01;31m[KDDS_CDR[m[K);
+[6.498s]       |                            [01;31m[K^~~~~~~[m[K
+[6.498s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:156:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass eprosima::fastcdr::Cdr[m[K’ has no member named ‘[01m[Kget_serialized_data_length[m[K’; did you mean ‘[01m[KgetSerializedDataLength[m[K’?
+[6.499s]   156 |         payload->length = static_cast<uint32_t>(scdr.[01;31m[Kget_serialized_data_length[m[K());
+[6.504s]       |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.505s]       |                                                      [32m[KgetSerializedDataLength[m[K
+[6.510s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:[m[K In member function ‘[01m[Kvirtual bool uros::agent::graph_manager::MicrorosGraphInfoTypeSupport::deserialize(eprosima::fastrtps::rtps::SerializedPayload_t*, void*)[m[K’:
+[6.511s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:172:28:[m[K [01;31m[Kerror: [m[K‘[01m[KDDS_CDR[m[K’ is not a member of ‘[01m[Keprosima::fastcdr[m[K’
+[6.511s]   172 |         eprosima::fastcdr::[01;31m[KDDS_CDR[m[K);
+[6.515s]       |                            [01;31m[K^~~~~~~[m[K
+[7.319s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_manager.cpp:[m[K In member function ‘[01m[Kvoid uros::agent::graph_manager::GraphManager::add_datawriter(const eprosima::fastrtps::rtps::GUID_t&, const string&, const string&, const eprosima::fastrtps::rtps::GUID_t&, const eprosima::fastdds::dds::DataWriterQos&)[m[K’:
+[7.321s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_manager.cpp:378:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krosidl_get_zero_initialized_type_hash[m[K’ was not declared in this scope; did you mean ‘[01m[Krcutils_get_zero_initialized_hash_map[m[K’?
+[7.327s]   378 |         [01;31m[Krosidl_get_zero_initialized_type_hash[m[K(), participant_gid, qos_profile, false);
+[7.327s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.329s]       |         [32m[Krcutils_get_zero_initialized_hash_map[m[K
+[7.377s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_manager.cpp:[m[K In member function ‘[01m[Kvoid uros::agent::graph_manager::GraphManager::add_datareader(const eprosima::fastrtps::rtps::GUID_t&, const string&, const string&, const eprosima::fastrtps::rtps::GUID_t&, const eprosima::fastdds::dds::DataReaderQos&)[m[K’:
+[7.380s] [01m[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_manager.cpp:420:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krosidl_get_zero_initialized_type_hash[m[K’ was not declared in this scope; did you mean ‘[01m[Krcutils_get_zero_initialized_hash_map[m[K’?
+[7.381s]   420 |         [01;31m[Krosidl_get_zero_initialized_type_hash[m[K(), participant_gid, qos_profile, true);
+[7.381s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.381s]       |         [32m[Krcutils_get_zero_initialized_hash_map[m[K
+[9.578s] gmake[2]: *** [CMakeFiles/micro_ros_agent.dir/build.make:118: CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_typesupport.cpp.o] Error 1
+[9.578s] gmake[2]: *** Waiting for unfinished jobs....
+[11.787s] gmake[2]: *** [CMakeFiles/micro_ros_agent.dir/build.make:104: CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_manager.cpp.o] Error 1
+[11.791s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/micro_ros_agent.dir/all] Error 2
+[11.791s] gmake: *** [Makefile:146: all] Error 2
+[11.804s] Invoked command in '/home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all:/home/habibashaker/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent -- -j2 -l2

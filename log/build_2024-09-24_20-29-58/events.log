@@ -1,0 +1,170 @@
+[0.000000] (-) TimerEvent: {}
+[0.003526] (-) JobUnselected: {'identifier': 'stepper_pkg'}
+[0.003699] (micro_ros_agent) JobQueued: {'identifier': 'micro_ros_agent', 'dependencies': OrderedDict()}
+[0.003791] (micro_ros_agent) JobStarted: {'identifier': 'micro_ros_agent'}
+[0.045878] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'cmake'}
+[0.050675] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'build'}
+[0.053331] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent', '--', '-j2', '-l2'], 'cwd': '/home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'habibashaker'), ('LC_TIME', 'ar_EG.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/habibashaker/ros2_ws/install/my_robot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/habibashaker'), ('OLDPWD', '/home/habibashaker'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ar_EG.UTF-8'), ('MANAGERPID', '1277'), ('SYSTEMD_EXEC_PID', '1443'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38795'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/habibashaker/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'habibashaker'), ('JOURNAL_STREAM', '8:11928'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'habibashaker'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/habibashaker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/habibashaker-Lenovo-G50-30:@/tmp/.ICE-unix/1423,unix/habibashaker-Lenovo-G50-30:/tmp/.ICE-unix/1423'), ('INVOCATION_ID', '554b6f8575f64260a944e0cca7e45446'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ar_EG.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ar_EG.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CDHWU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/habibashaker/ros2_ws/install/my_robot_bringup:/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all:/home/habibashaker/ros2_ws/install/my_robot_interfaces:/home/habibashaker/ros2_ws/install/my_py_pkg:/home/habibashaker/ros2_ws/install/my_cpp_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ar_EG.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:47c46d0a-2dc6-4bac-935c-d9c7f9a1e06d'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ar_EG.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ar_EG.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/habibashaker/ros2_ws/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/home/habibashaker/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ar_EG.UTF-8'), ('LC_PAPER', 'ar_EG.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/habibashaker/ros2_ws/install/my_robot_bringup:/home/habibashaker/ros2_ws/install/my_robot_interfaces:/home/habibashaker/ros2_ws/install/my_cpp_pkg:/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all:/home/habibashaker/ros2_ws/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[0.098361] (-) TimerEvent: {}
+[0.198954] (-) TimerEvent: {}
+[0.239102] (micro_ros_agent) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_agent\x1b[0m\n'}
+[0.300476] (-) TimerEvent: {}
+[0.374644] (micro_ros_agent) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_manager.cpp.o\x1b[0m\n'}
+[0.382646] (micro_ros_agent) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_typesupport.cpp.o\x1b[0m\n'}
+[0.400661] (-) TimerEvent: {}
+[0.502239] (-) TimerEvent: {}
+[0.604747] (-) TimerEvent: {}
+[0.706139] (-) TimerEvent: {}
+[0.809360] (-) TimerEvent: {}
+[0.910805] (-) TimerEvent: {}
+[1.013466] (-) TimerEvent: {}
+[1.114836] (-) TimerEvent: {}
+[1.216315] (-) TimerEvent: {}
+[1.319491] (-) TimerEvent: {}
+[1.420909] (-) TimerEvent: {}
+[1.523739] (-) TimerEvent: {}
+[1.625176] (-) TimerEvent: {}
+[1.727469] (-) TimerEvent: {}
+[1.833477] (-) TimerEvent: {}
+[1.934977] (-) TimerEvent: {}
+[2.036655] (-) TimerEvent: {}
+[2.139504] (-) TimerEvent: {}
+[2.241132] (-) TimerEvent: {}
+[2.344751] (-) TimerEvent: {}
+[2.446487] (-) TimerEvent: {}
+[2.548176] (-) TimerEvent: {}
+[2.651755] (-) TimerEvent: {}
+[2.753433] (-) TimerEvent: {}
+[2.856664] (-) TimerEvent: {}
+[2.957700] (-) TimerEvent: {}
+[3.061490] (-) TimerEvent: {}
+[3.163179] (-) TimerEvent: {}
+[3.264806] (-) TimerEvent: {}
+[3.368405] (-) TimerEvent: {}
+[3.470292] (-) TimerEvent: {}
+[3.573476] (-) TimerEvent: {}
+[3.675187] (-) TimerEvent: {}
+[3.776850] (-) TimerEvent: {}
+[3.879445] (-) TimerEvent: {}
+[3.982476] (-) TimerEvent: {}
+[4.084072] (-) TimerEvent: {}
+[4.186479] (-) TimerEvent: {}
+[4.287476] (-) TimerEvent: {}
+[4.391478] (-) TimerEvent: {}
+[4.493103] (-) TimerEvent: {}
+[4.594827] (-) TimerEvent: {}
+[4.696489] (-) TimerEvent: {}
+[4.799872] (-) TimerEvent: {}
+[4.900862] (-) TimerEvent: {}
+[5.002475] (-) TimerEvent: {}
+[5.106491] (-) TimerEvent: {}
+[5.208238] (-) TimerEvent: {}
+[5.310133] (-) TimerEvent: {}
+[5.413866] (-) TimerEvent: {}
+[5.515805] (-) TimerEvent: {}
+[5.617230] (-) TimerEvent: {}
+[5.720644] (-) TimerEvent: {}
+[5.822489] (-) TimerEvent: {}
+[5.925710] (-) TimerEvent: {}
+[6.027261] (-) TimerEvent: {}
+[6.131741] (-) TimerEvent: {}
+[6.233393] (-) TimerEvent: {}
+[6.335280] (-) TimerEvent: {}
+[6.438478] (-) TimerEvent: {}
+[6.446457] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual bool uros::agent::graph_manager::ParticipantEntitiesInfoTypeSupport::serialize(void*, eprosima::fastrtps::rtps::SerializedPayload_t*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.449176] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:57:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KDDS_CDR\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Keprosima::fastcdr\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.450791] (micro_ros_agent) StderrLine: {'line': b'   57 |         eprosima::fastcdr::\x1b[01;31m\x1b[KDDS_CDR\x1b[m\x1b[K);\n'}
+[6.451161] (micro_ros_agent) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.458009] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:64:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass eprosima::fastcdr::Cdr\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_serialized_data_length\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KgetSerializedDataLength\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.459498] (micro_ros_agent) StderrLine: {'line': b'   64 |         payload->length = static_cast<uint32_t>(scdr.\x1b[01;31m\x1b[Kget_serialized_data_length\x1b[m\x1b[K());\n'}
+[6.459881] (micro_ros_agent) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.460188] (micro_ros_agent) StderrLine: {'line': b'      |                                                      \x1b[32m\x1b[KgetSerializedDataLength\x1b[m\x1b[K\n'}
+[6.466369] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual bool uros::agent::graph_manager::ParticipantEntitiesInfoTypeSupport::deserialize(eprosima::fastrtps::rtps::SerializedPayload_t*, void*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.466851] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:80:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KDDS_CDR\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Keprosima::fastcdr\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.467238] (micro_ros_agent) StderrLine: {'line': b'   80 |         eprosima::fastcdr::\x1b[01;31m\x1b[KDDS_CDR\x1b[m\x1b[K);\n'}
+[6.467629] (micro_ros_agent) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.492305] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual bool uros::agent::graph_manager::MicrorosGraphInfoTypeSupport::serialize(void*, eprosima::fastrtps::rtps::SerializedPayload_t*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.495737] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:149:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KDDS_CDR\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Keprosima::fastcdr\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.496322] (micro_ros_agent) StderrLine: {'line': b'  149 |         eprosima::fastcdr::\x1b[01;31m\x1b[KDDS_CDR\x1b[m\x1b[K);\n'}
+[6.501166] (micro_ros_agent) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.501659] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:156:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass eprosima::fastcdr::Cdr\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_serialized_data_length\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KgetSerializedDataLength\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.502086] (micro_ros_agent) StderrLine: {'line': b'  156 |         payload->length = static_cast<uint32_t>(scdr.\x1b[01;31m\x1b[Kget_serialized_data_length\x1b[m\x1b[K());\n'}
+[6.507652] (micro_ros_agent) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.508151] (micro_ros_agent) StderrLine: {'line': b'      |                                                      \x1b[32m\x1b[KgetSerializedDataLength\x1b[m\x1b[K\n'}
+[6.513635] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual bool uros::agent::graph_manager::MicrorosGraphInfoTypeSupport::deserialize(eprosima::fastrtps::rtps::SerializedPayload_t*, void*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.514214] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_typesupport.cpp:172:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KDDS_CDR\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Keprosima::fastcdr\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.514804] (micro_ros_agent) StderrLine: {'line': b'  172 |         eprosima::fastcdr::\x1b[01;31m\x1b[KDDS_CDR\x1b[m\x1b[K);\n'}
+[6.515246] (micro_ros_agent) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.540479] (-) TimerEvent: {}
+[6.641495] (-) TimerEvent: {}
+[6.742745] (-) TimerEvent: {}
+[6.845477] (-) TimerEvent: {}
+[6.946490] (-) TimerEvent: {}
+[7.047512] (-) TimerEvent: {}
+[7.149475] (-) TimerEvent: {}
+[7.250702] (-) TimerEvent: {}
+[7.321721] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_manager.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid uros::agent::graph_manager::GraphManager::add_datawriter(const eprosima::fastrtps::rtps::GUID_t&, const string&, const string&, const eprosima::fastrtps::rtps::GUID_t&, const eprosima::fastdds::dds::DataWriterQos&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.324515] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_manager.cpp:378:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krosidl_get_zero_initialized_type_hash\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krcutils_get_zero_initialized_hash_map\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.327124] (micro_ros_agent) StderrLine: {'line': b'  378 |         \x1b[01;31m\x1b[Krosidl_get_zero_initialized_type_hash\x1b[m\x1b[K(), participant_gid, qos_profile, false);\n'}
+[7.330812] (micro_ros_agent) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.331314] (micro_ros_agent) StderrLine: {'line': b'      |         \x1b[32m\x1b[Krcutils_get_zero_initialized_hash_map\x1b[m\x1b[K\n'}
+[7.351474] (-) TimerEvent: {}
+[7.377685] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_manager.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid uros::agent::graph_manager::GraphManager::add_datareader(const eprosima::fastrtps::rtps::GUID_t&, const string&, const string&, const eprosima::fastrtps::rtps::GUID_t&, const eprosima::fastdds::dds::DataReaderQos&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.381609] (micro_ros_agent) StderrLine: {'line': b'\x1b[01m\x1b[K/home/habibashaker/AP25_Stepper_RnD/src/micro-ROS-Agent/micro_ros_agent/src/agent/graph_manager/graph_manager.cpp:420:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krosidl_get_zero_initialized_type_hash\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krcutils_get_zero_initialized_hash_map\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.384040] (micro_ros_agent) StderrLine: {'line': b'  420 |         \x1b[01;31m\x1b[Krosidl_get_zero_initialized_type_hash\x1b[m\x1b[K(), participant_gid, qos_profile, true);\n'}
+[7.384568] (micro_ros_agent) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.385007] (micro_ros_agent) StderrLine: {'line': b'      |         \x1b[32m\x1b[Krcutils_get_zero_initialized_hash_map\x1b[m\x1b[K\n'}
+[7.451647] (-) TimerEvent: {}
+[7.553191] (-) TimerEvent: {}
+[7.656455] (-) TimerEvent: {}
+[7.758133] (-) TimerEvent: {}
+[7.863477] (-) TimerEvent: {}
+[7.965088] (-) TimerEvent: {}
+[8.068663] (-) TimerEvent: {}
+[8.170422] (-) TimerEvent: {}
+[8.272237] (-) TimerEvent: {}
+[8.374855] (-) TimerEvent: {}
+[8.480824] (-) TimerEvent: {}
+[8.583485] (-) TimerEvent: {}
+[8.691492] (-) TimerEvent: {}
+[8.795247] (-) TimerEvent: {}
+[8.896983] (-) TimerEvent: {}
+[9.000445] (-) TimerEvent: {}
+[9.101864] (-) TimerEvent: {}
+[9.205479] (-) TimerEvent: {}
+[9.306890] (-) TimerEvent: {}
+[9.408318] (-) TimerEvent: {}
+[9.513493] (-) TimerEvent: {}
+[9.580908] (micro_ros_agent) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/micro_ros_agent.dir/build.make:118: CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_typesupport.cpp.o] Error 1\n'}
+[9.581857] (micro_ros_agent) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[9.614657] (-) TimerEvent: {}
+[9.717105] (-) TimerEvent: {}
+[9.817798] (-) TimerEvent: {}
+[9.918963] (-) TimerEvent: {}
+[10.020252] (-) TimerEvent: {}
+[10.120991] (-) TimerEvent: {}
+[10.221896] (-) TimerEvent: {}
+[10.323004] (-) TimerEvent: {}
+[10.423838] (-) TimerEvent: {}
+[10.525002] (-) TimerEvent: {}
+[10.626147] (-) TimerEvent: {}
+[10.727137] (-) TimerEvent: {}
+[10.830483] (-) TimerEvent: {}
+[10.931135] (-) TimerEvent: {}
+[11.032254] (-) TimerEvent: {}
+[11.133725] (-) TimerEvent: {}
+[11.234384] (-) TimerEvent: {}
+[11.336620] (-) TimerEvent: {}
+[11.439734] (-) TimerEvent: {}
+[11.540528] (-) TimerEvent: {}
+[11.642488] (-) TimerEvent: {}
+[11.744491] (-) TimerEvent: {}
+[11.790597] (micro_ros_agent) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/micro_ros_agent.dir/build.make:104: CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_manager.cpp.o] Error 1\n'}
+[11.791739] (micro_ros_agent) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/micro_ros_agent.dir/all] Error 2\n'}
+[11.794938] (micro_ros_agent) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[11.807429] (micro_ros_agent) CommandEnded: {'returncode': 2}
+[11.846295] (-) TimerEvent: {}
+[11.947545] (-) TimerEvent: {}
+[12.050515] (-) TimerEvent: {}
+[12.081383] (micro_ros_agent) JobEnded: {'identifier': 'micro_ros_agent', 'rc': 2}
+[12.094207] (-) EventReactorShutdown: {}

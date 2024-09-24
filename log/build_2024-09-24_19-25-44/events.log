@@ -1,0 +1,583 @@
+[0.000000] (-) TimerEvent: {}
+[0.003223] (micro_ros_agent) JobQueued: {'identifier': 'micro_ros_agent', 'dependencies': OrderedDict()}
+[0.003413] (stepper_pkg) JobQueued: {'identifier': 'stepper_pkg', 'dependencies': OrderedDict()}
+[0.003506] (micro_ros_agent) JobStarted: {'identifier': 'micro_ros_agent'}
+[0.050988] (stepper_pkg) JobStarted: {'identifier': 'stepper_pkg'}
+[0.101915] (-) TimerEvent: {}
+[0.115544] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'cmake'}
+[0.123664] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'build'}
+[0.123908] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent', '--', '-j2', '-l2'], 'cwd': '/home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'habibashaker'), ('LC_TIME', 'ar_EG.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/habibashaker/ros2_ws/install/my_robot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/habibashaker'), ('OLDPWD', '/home/habibashaker/AP25_Stepper_RnD/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ar_EG.UTF-8'), ('MANAGERPID', '1277'), ('SYSTEMD_EXEC_PID', '1443'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '22329'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/habibashaker/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'habibashaker'), ('JOURNAL_STREAM', '8:11928'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'habibashaker'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/habibashaker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/habibashaker-Lenovo-G50-30:@/tmp/.ICE-unix/1423,unix/habibashaker-Lenovo-G50-30:/tmp/.ICE-unix/1423'), ('INVOCATION_ID', '554b6f8575f64260a944e0cca7e45446'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ar_EG.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ar_EG.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CDHWU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/habibashaker/ros2_ws/install/my_robot_bringup:/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all:/home/habibashaker/ros2_ws/install/my_robot_interfaces:/home/habibashaker/ros2_ws/install/my_py_pkg:/home/habibashaker/ros2_ws/install/my_cpp_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ar_EG.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:26d59b8f-89a8-4d85-ba0a-c9d5e7baad07'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ar_EG.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ar_EG.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/habibashaker/ros2_ws/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/home/habibashaker/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ar_EG.UTF-8'), ('LC_PAPER', 'ar_EG.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/habibashaker/ros2_ws/install/my_robot_bringup:/home/habibashaker/ros2_ws/install/my_robot_interfaces:/home/habibashaker/ros2_ws/install/my_cpp_pkg:/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all:/home/habibashaker/ros2_ws/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[0.202859] (-) TimerEvent: {}
+[0.293970] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.303006] (-) TimerEvent: {}
+[0.405344] (-) TimerEvent: {}
+[0.506605] (-) TimerEvent: {}
+[0.609585] (-) TimerEvent: {}
+[0.710807] (-) TimerEvent: {}
+[0.813193] (-) TimerEvent: {}
+[0.914388] (-) TimerEvent: {}
+[1.002943] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_cmake: 3.1.5 (/opt/ros/humble/share/rosidl_cmake/cmake)\n'}
+[1.005063] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.014552] (-) TimerEvent: {}
+[1.075164] (micro_ros_agent) StdoutLine: {'line': b'-- Found fastrtps_cmake_module: 2.2.2 (/opt/ros/humble/share/fastrtps_cmake_module/cmake)\n'}
+[1.077848] (micro_ros_agent) StdoutLine: {'line': b'-- Found rmw_dds_common: 1.6.0 (/opt/ros/humble/share/rmw_dds_common/cmake)\n'}
+[1.116852] (-) TimerEvent: {}
+[1.183250] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.217006] (-) TimerEvent: {}
+[1.223838] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.271844] (micro_ros_agent) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.317162] (-) TimerEvent: {}
+[1.335983] (micro_ros_agent) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.417324] (-) TimerEvent: {}
+[1.426524] (micro_ros_agent) StdoutLine: {'line': b'-- Found rmw_fastrtps_shared_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_shared_cpp/cmake)\n'}
+[1.517494] (-) TimerEvent: {}
+[1.618800] (-) TimerEvent: {}
+[1.650887] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.664798] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.10 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[1.675873] (micro_ros_agent) StdoutLine: {'line': b'-- Found micro_ros_msgs: 1.0.0 (/opt/ros/humble/share/micro_ros_msgs/cmake)\n'}
+[1.719840] (-) TimerEvent: {}
+[1.821135] (-) TimerEvent: {}
+[1.923420] (-) TimerEvent: {}
+[2.027272] (-) TimerEvent: {}
+[2.100449] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.128467] (-) TimerEvent: {}
+[2.198916] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done\n'}
+[2.215074] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent\n'}
+[2.229871] (-) TimerEvent: {}
+[2.333718] (-) TimerEvent: {}
+[2.435883] (-) TimerEvent: {}
+[2.508776] (micro_ros_agent) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/main.cpp.o\x1b[0m\n'}
+[2.529657] (micro_ros_agent) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/Agent.cpp.o\x1b[0m\n'}
+[2.536877] (-) TimerEvent: {}
+[2.647049] (-) TimerEvent: {}
+[2.750872] (-) TimerEvent: {}
+[2.858867] (-) TimerEvent: {}
+[2.960880] (-) TimerEvent: {}
+[3.073908] (-) TimerEvent: {}
+[3.174651] (-) TimerEvent: {}
+[3.277853] (-) TimerEvent: {}
+[3.379942] (-) TimerEvent: {}
+[3.480949] (-) TimerEvent: {}
+[3.582028] (-) TimerEvent: {}
+[3.684848] (-) TimerEvent: {}
+[3.785862] (-) TimerEvent: {}
+[3.889848] (-) TimerEvent: {}
+[3.990475] (-) TimerEvent: {}
+[4.093840] (-) TimerEvent: {}
+[4.195346] (-) TimerEvent: {}
+[4.298852] (-) TimerEvent: {}
+[4.400371] (-) TimerEvent: {}
+[4.501569] (-) TimerEvent: {}
+[4.603835] (-) TimerEvent: {}
+[4.710386] (-) TimerEvent: {}
+[4.817877] (-) TimerEvent: {}
+[4.924885] (-) TimerEvent: {}
+[5.040868] (-) TimerEvent: {}
+[5.141553] (-) TimerEvent: {}
+[5.253866] (-) TimerEvent: {}
+[5.355118] (-) TimerEvent: {}
+[5.458891] (-) TimerEvent: {}
+[5.530011] (stepper_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/stepper_pkg', 'build', '--build-base', '/home/habibashaker/AP25_Stepper_RnD/build/stepper_pkg/build', 'install', '--record', '/home/habibashaker/AP25_Stepper_RnD/build/stepper_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/habibashaker/AP25_Stepper_RnD/src/stepper_pkg', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'habibashaker', 'LC_TIME': 'ar_EG.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/habibashaker/ros2_ws/install/my_robot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/habibashaker', 'OLDPWD': '/home/habibashaker/AP25_Stepper_RnD/src', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'ar_EG.UTF-8', 'MANAGERPID': '1277', 'SYSTEMD_EXEC_PID': '1443', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '22329', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/habibashaker/ros2_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'habibashaker', 'JOURNAL_STREAM': '8:11928', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'habibashaker', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/habibashaker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/habibashaker-Lenovo-G50-30:@/tmp/.ICE-unix/1423,unix/habibashaker-Lenovo-G50-30:/tmp/.ICE-unix/1423', 'INVOCATION_ID': '554b6f8575f64260a944e0cca7e45446', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'ar_EG.UTF-8', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'LC_TELEPHONE': 'ar_EG.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.CDHWU2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/habibashaker/ros2_ws/install/my_robot_bringup:/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all:/home/habibashaker/ros2_ws/install/my_robot_interfaces:/home/habibashaker/ros2_ws/install/my_py_pkg:/home/habibashaker/ros2_ws/install/my_cpp_pkg:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'ar_EG.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:26d59b8f-89a8-4d85-ba0a-c9d5e7baad07', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ar_EG.UTF-8', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'ar_EG.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/habibashaker/AP25_Stepper_RnD/build/stepper_pkg', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/habibashaker/AP25_Stepper_RnD/build/stepper_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/habibashaker/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages:/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/habibashaker/ros2_ws/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/home/habibashaker/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'ar_EG.UTF-8', 'LC_PAPER': 'ar_EG.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/habibashaker/ros2_ws/install/my_robot_bringup:/home/habibashaker/ros2_ws/install/my_robot_interfaces:/home/habibashaker/ros2_ws/install/my_cpp_pkg'}, 'shell': False}
+[5.568956] (-) TimerEvent: {}
+[5.672891] (-) TimerEvent: {}
+[5.783866] (-) TimerEvent: {}
+[5.890889] (-) TimerEvent: {}
+[5.998861] (-) TimerEvent: {}
+[6.099557] (-) TimerEvent: {}
+[6.203891] (-) TimerEvent: {}
+[6.314865] (-) TimerEvent: {}
+[6.417862] (-) TimerEvent: {}
+[6.519160] (-) TimerEvent: {}
+[6.626867] (-) TimerEvent: {}
+[6.732094] (-) TimerEvent: {}
+[6.837874] (-) TimerEvent: {}
+[6.942874] (-) TimerEvent: {}
+[7.050864] (-) TimerEvent: {}
+[7.159869] (-) TimerEvent: {}
+[7.263864] (-) TimerEvent: {}
+[7.366885] (-) TimerEvent: {}
+[7.471854] (-) TimerEvent: {}
+[7.577933] (-) TimerEvent: {}
+[7.682882] (-) TimerEvent: {}
+[7.786880] (-) TimerEvent: {}
+[7.888130] (-) TimerEvent: {}
+[7.989087] (-) TimerEvent: {}
+[8.093843] (-) TimerEvent: {}
+[8.197913] (-) TimerEvent: {}
+[8.305122] (-) TimerEvent: {}
+[8.407884] (-) TimerEvent: {}
+[8.512032] (-) TimerEvent: {}
+[8.613562] (-) TimerEvent: {}
+[8.675998] (stepper_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[8.685023] (stepper_pkg) StdoutLine: {'line': b'writing ../../build/stepper_pkg/stepper_pkg.egg-info/PKG-INFO\n'}
+[8.687258] (stepper_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/stepper_pkg/stepper_pkg.egg-info/dependency_links.txt\n'}
+[8.694485] (stepper_pkg) StdoutLine: {'line': b'writing entry points to ../../build/stepper_pkg/stepper_pkg.egg-info/entry_points.txt\n'}
+[8.698510] (stepper_pkg) StdoutLine: {'line': b'writing requirements to ../../build/stepper_pkg/stepper_pkg.egg-info/requires.txt\n'}
+[8.699087] (stepper_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/stepper_pkg/stepper_pkg.egg-info/top_level.txt\n'}
+[8.715378] (stepper_pkg) StdoutLine: {'line': b"reading manifest file '../../build/stepper_pkg/stepper_pkg.egg-info/SOURCES.txt'\n"}
+[8.716256] (-) TimerEvent: {}
+[8.724029] (stepper_pkg) StdoutLine: {'line': b"writing manifest file '../../build/stepper_pkg/stepper_pkg.egg-info/SOURCES.txt'\n"}
+[8.726120] (stepper_pkg) StdoutLine: {'line': b'running build\n'}
+[8.727596] (stepper_pkg) StdoutLine: {'line': b'running build_py\n'}
+[8.733860] (stepper_pkg) StdoutLine: {'line': b'running install\n'}
+[8.738958] (stepper_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[8.756957] (stepper_pkg) StdoutLine: {'line': b'running install_data\n'}
+[8.760922] (stepper_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[8.776572] (stepper_pkg) StdoutLine: {'line': b"removing '/home/habibashaker/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages/stepper_pkg-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[8.783311] (stepper_pkg) StdoutLine: {'line': b'Copying ../../build/stepper_pkg/stepper_pkg.egg-info to /home/habibashaker/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages/stepper_pkg-0.0.0-py3.10.egg-info\n'}
+[8.799854] (stepper_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[8.817858] (-) TimerEvent: {}
+[8.919105] (-) TimerEvent: {}
+[8.997504] (stepper_pkg) StdoutLine: {'line': b'Installing stepper_command script to /home/habibashaker/AP25_Stepper_RnD/install/stepper_pkg/lib/stepper_pkg\n'}
+[9.004496] (stepper_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/habibashaker/AP25_Stepper_RnD/build/stepper_pkg/install.log'\n"}
+[9.027903] (-) TimerEvent: {}
+[9.130889] (-) TimerEvent: {}
+[9.173458] (stepper_pkg) CommandEnded: {'returncode': 0}
+[9.234869] (-) TimerEvent: {}
+[9.317287] (stepper_pkg) JobEnded: {'identifier': 'stepper_pkg', 'rc': 0}
+[9.337876] (-) TimerEvent: {}
+[9.440860] (-) TimerEvent: {}
+[9.541549] (-) TimerEvent: {}
+[9.642258] (-) TimerEvent: {}
+[9.743849] (-) TimerEvent: {}
+[9.847383] (-) TimerEvent: {}
+[9.948030] (-) TimerEvent: {}
+[10.049511] (-) TimerEvent: {}
+[10.152870] (-) TimerEvent: {}
+[10.254304] (-) TimerEvent: {}
+[10.355772] (-) TimerEvent: {}
+[10.457182] (-) TimerEvent: {}
+[10.560627] (-) TimerEvent: {}
+[10.664994] (-) TimerEvent: {}
+[10.773153] (-) TimerEvent: {}
+[10.879871] (-) TimerEvent: {}
+[10.981445] (-) TimerEvent: {}
+[11.087488] (-) TimerEvent: {}
+[11.190622] (-) TimerEvent: {}
+[11.292100] (-) TimerEvent: {}
+[11.395540] (-) TimerEvent: {}
+[11.497011] (-) TimerEvent: {}
+[11.598301] (-) TimerEvent: {}
+[11.702569] (-) TimerEvent: {}
+[11.804027] (-) TimerEvent: {}
+[11.905550] (-) TimerEvent: {}
+[12.009874] (-) TimerEvent: {}
+[12.116869] (-) TimerEvent: {}
+[12.219876] (-) TimerEvent: {}
+[12.322361] (-) TimerEvent: {}
+[12.427914] (-) TimerEvent: {}
+[12.530870] (-) TimerEvent: {}
+[12.632367] (-) TimerEvent: {}
+[12.734002] (-) TimerEvent: {}
+[12.837573] (-) TimerEvent: {}
+[12.939103] (-) TimerEvent: {}
+[13.040631] (-) TimerEvent: {}
+[13.144270] (-) TimerEvent: {}
+[13.245700] (-) TimerEvent: {}
+[13.347154] (-) TimerEvent: {}
+[13.449619] (-) TimerEvent: {}
+[13.553378] (-) TimerEvent: {}
+[13.656147] (-) TimerEvent: {}
+[13.757448] (-) TimerEvent: {}
+[13.860436] (-) TimerEvent: {}
+[13.962846] (-) TimerEvent: {}
+[14.065599] (-) TimerEvent: {}
+[14.167489] (-) TimerEvent: {}
+[14.271271] (-) TimerEvent: {}
+[14.373192] (-) TimerEvent: {}
+[14.475112] (-) TimerEvent: {}
+[14.578831] (-) TimerEvent: {}
+[14.682867] (-) TimerEvent: {}
+[14.784311] (-) TimerEvent: {}
+[14.886185] (-) TimerEvent: {}
+[14.989868] (-) TimerEvent: {}
+[15.090850] (-) TimerEvent: {}
+[15.192770] (-) TimerEvent: {}
+[15.295296] (-) TimerEvent: {}
+[15.398241] (-) TimerEvent: {}
+[15.501868] (-) TimerEvent: {}
+[15.603697] (-) TimerEvent: {}
+[15.705549] (-) TimerEvent: {}
+[15.810798] (-) TimerEvent: {}
+[15.917975] (-) TimerEvent: {}
+[16.023900] (-) TimerEvent: {}
+[16.127965] (-) TimerEvent: {}
+[16.232145] (-) TimerEvent: {}
+[16.333801] (-) TimerEvent: {}
+[16.435479] (-) TimerEvent: {}
+[16.538866] (-) TimerEvent: {}
+[16.642625] (-) TimerEvent: {}
+[16.744875] (-) TimerEvent: {}
+[16.846770] (-) TimerEvent: {}
+[16.951244] (-) TimerEvent: {}
+[17.053178] (-) TimerEvent: {}
+[17.155079] (-) TimerEvent: {}
+[17.258148] (-) TimerEvent: {}
+[17.360032] (-) TimerEvent: {}
+[17.464047] (-) TimerEvent: {}
+[17.565946] (-) TimerEvent: {}
+[17.667818] (-) TimerEvent: {}
+[17.769871] (-) TimerEvent: {}
+[17.874317] (-) TimerEvent: {}
+[17.976280] (-) TimerEvent: {}
+[18.078223] (-) TimerEvent: {}
+[18.180072] (-) TimerEvent: {}
+[18.283265] (-) TimerEvent: {}
+[18.386101] (-) TimerEvent: {}
+[18.490872] (-) TimerEvent: {}
+[18.591866] (-) TimerEvent: {}
+[18.693138] (-) TimerEvent: {}
+[18.795925] (-) TimerEvent: {}
+[18.898874] (-) TimerEvent: {}
+[19.000843] (-) TimerEvent: {}
+[19.105092] (-) TimerEvent: {}
+[19.206963] (-) TimerEvent: {}
+[19.308643] (-) TimerEvent: {}
+[19.413912] (-) TimerEvent: {}
+[19.515422] (-) TimerEvent: {}
+[19.618870] (-) TimerEvent: {}
+[19.719851] (-) TimerEvent: {}
+[19.821718] (-) TimerEvent: {}
+[19.925319] (-) TimerEvent: {}
+[20.027251] (-) TimerEvent: {}
+[20.130875] (-) TimerEvent: {}
+[20.232513] (-) TimerEvent: {}
+[20.335872] (-) TimerEvent: {}
+[20.437777] (-) TimerEvent: {}
+[20.541865] (-) TimerEvent: {}
+[20.644887] (-) TimerEvent: {}
+[20.749126] (-) TimerEvent: {}
+[20.854873] (-) TimerEvent: {}
+[20.956825] (-) TimerEvent: {}
+[21.058833] (-) TimerEvent: {}
+[21.163102] (-) TimerEvent: {}
+[21.264707] (-) TimerEvent: {}
+[21.366551] (-) TimerEvent: {}
+[21.469369] (-) TimerEvent: {}
+[21.572206] (-) TimerEvent: {}
+[21.673863] (-) TimerEvent: {}
+[21.777886] (-) TimerEvent: {}
+[21.879158] (-) TimerEvent: {}
+[21.982146] (-) TimerEvent: {}
+[22.083834] (-) TimerEvent: {}
+[22.187856] (-) TimerEvent: {}
+[22.289579] (-) TimerEvent: {}
+[22.391248] (-) TimerEvent: {}
+[22.494876] (-) TimerEvent: {}
+[22.597886] (-) TimerEvent: {}
+[22.698542] (-) TimerEvent: {}
+[22.801891] (-) TimerEvent: {}
+[22.903647] (-) TimerEvent: {}
+[23.008151] (-) TimerEvent: {}
+[23.112900] (-) TimerEvent: {}
+[23.214874] (-) TimerEvent: {}
+[23.316649] (-) TimerEvent: {}
+[23.418874] (-) TimerEvent: {}
+[23.519961] (-) TimerEvent: {}
+[23.624877] (-) TimerEvent: {}
+[23.725575] (-) TimerEvent: {}
+[23.827874] (-) TimerEvent: {}
+[23.929184] (-) TimerEvent: {}
+[24.031642] (-) TimerEvent: {}
+[24.132955] (-) TimerEvent: {}
+[24.235648] (-) TimerEvent: {}
+[24.337383] (-) TimerEvent: {}
+[24.440626] (-) TimerEvent: {}
+[24.541924] (-) TimerEvent: {}
+[24.643874] (-) TimerEvent: {}
+[24.745124] (-) TimerEvent: {}
+[24.846386] (-) TimerEvent: {}
+[24.947002] (-) TimerEvent: {}
+[25.048021] (-) TimerEvent: {}
+[25.149066] (-) TimerEvent: {}
+[25.251103] (-) TimerEvent: {}
+[25.352072] (-) TimerEvent: {}
+[25.454891] (-) TimerEvent: {}
+[25.557872] (-) TimerEvent: {}
+[25.658488] (-) TimerEvent: {}
+[25.759887] (-) TimerEvent: {}
+[25.861225] (-) TimerEvent: {}
+[25.893441] (micro_ros_agent) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_manager.cpp.o\x1b[0m\n'}
+[25.961381] (-) TimerEvent: {}
+[26.062345] (-) TimerEvent: {}
+[26.162962] (-) TimerEvent: {}
+[26.263918] (-) TimerEvent: {}
+[26.364859] (-) TimerEvent: {}
+[26.465827] (-) TimerEvent: {}
+[26.566850] (-) TimerEvent: {}
+[26.667481] (-) TimerEvent: {}
+[26.768141] (-) TimerEvent: {}
+[26.869171] (-) TimerEvent: {}
+[26.970221] (-) TimerEvent: {}
+[27.071262] (-) TimerEvent: {}
+[27.172321] (-) TimerEvent: {}
+[27.273368] (-) TimerEvent: {}
+[27.374807] (-) TimerEvent: {}
+[27.475852] (-) TimerEvent: {}
+[27.576532] (-) TimerEvent: {}
+[27.677655] (-) TimerEvent: {}
+[27.778690] (-) TimerEvent: {}
+[27.879705] (-) TimerEvent: {}
+[27.980728] (-) TimerEvent: {}
+[28.081727] (-) TimerEvent: {}
+[28.182788] (-) TimerEvent: {}
+[28.283758] (-) TimerEvent: {}
+[28.384411] (-) TimerEvent: {}
+[28.487871] (-) TimerEvent: {}
+[28.588948] (-) TimerEvent: {}
+[28.691479] (-) TimerEvent: {}
+[28.793867] (-) TimerEvent: {}
+[28.894542] (-) TimerEvent: {}
+[28.996133] (-) TimerEvent: {}
+[29.097283] (-) TimerEvent: {}
+[29.198335] (-) TimerEvent: {}
+[29.299764] (-) TimerEvent: {}
+[29.400779] (-) TimerEvent: {}
+[29.501904] (-) TimerEvent: {}
+[29.602861] (-) TimerEvent: {}
+[29.703971] (-) TimerEvent: {}
+[29.805051] (-) TimerEvent: {}
+[29.906060] (-) TimerEvent: {}
+[30.007025] (-) TimerEvent: {}
+[30.108009] (-) TimerEvent: {}
+[30.208993] (-) TimerEvent: {}
+[30.310627] (-) TimerEvent: {}
+[30.412094] (-) TimerEvent: {}
+[30.513115] (-) TimerEvent: {}
+[30.614109] (-) TimerEvent: {}
+[30.715128] (-) TimerEvent: {}
+[30.817186] (-) TimerEvent: {}
+[30.918145] (-) TimerEvent: {}
+[31.019142] (-) TimerEvent: {}
+[31.120113] (-) TimerEvent: {}
+[31.221097] (-) TimerEvent: {}
+[31.322121] (-) TimerEvent: {}
+[31.424443] (-) TimerEvent: {}
+[31.526386] (-) TimerEvent: {}
+[31.627996] (-) TimerEvent: {}
+[31.729175] (-) TimerEvent: {}
+[31.830188] (-) TimerEvent: {}
+[31.931186] (-) TimerEvent: {}
+[32.032195] (-) TimerEvent: {}
+[32.133184] (-) TimerEvent: {}
+[32.234346] (-) TimerEvent: {}
+[32.335339] (-) TimerEvent: {}
+[32.436342] (-) TimerEvent: {}
+[32.537339] (-) TimerEvent: {}
+[32.638402] (-) TimerEvent: {}
+[32.739597] (-) TimerEvent: {}
+[32.840821] (-) TimerEvent: {}
+[32.941832] (-) TimerEvent: {}
+[33.042851] (-) TimerEvent: {}
+[33.143860] (-) TimerEvent: {}
+[33.244869] (-) TimerEvent: {}
+[33.345863] (-) TimerEvent: {}
+[33.446993] (-) TimerEvent: {}
+[33.548464] (-) TimerEvent: {}
+[33.649499] (-) TimerEvent: {}
+[33.750530] (-) TimerEvent: {}
+[33.851583] (-) TimerEvent: {}
+[33.952602] (-) TimerEvent: {}
+[34.053616] (-) TimerEvent: {}
+[34.154634] (-) TimerEvent: {}
+[34.255680] (-) TimerEvent: {}
+[34.356716] (-) TimerEvent: {}
+[34.458408] (-) TimerEvent: {}
+[34.559070] (-) TimerEvent: {}
+[34.660085] (-) TimerEvent: {}
+[34.761435] (-) TimerEvent: {}
+[34.862409] (-) TimerEvent: {}
+[34.963379] (-) TimerEvent: {}
+[35.064375] (-) TimerEvent: {}
+[35.165475] (-) TimerEvent: {}
+[35.268876] (-) TimerEvent: {}
+[35.369599] (-) TimerEvent: {}
+[35.470597] (-) TimerEvent: {}
+[35.571604] (-) TimerEvent: {}
+[35.672692] (-) TimerEvent: {}
+[35.773774] (-) TimerEvent: {}
+[35.874785] (-) TimerEvent: {}
+[35.975768] (-) TimerEvent: {}
+[36.076799] (-) TimerEvent: {}
+[36.178715] (-) TimerEvent: {}
+[36.280493] (-) TimerEvent: {}
+[36.381664] (-) TimerEvent: {}
+[36.482654] (-) TimerEvent: {}
+[36.584288] (-) TimerEvent: {}
+[36.685325] (-) TimerEvent: {}
+[36.786486] (-) TimerEvent: {}
+[36.887501] (-) TimerEvent: {}
+[36.988531] (-) TimerEvent: {}
+[37.089725] (-) TimerEvent: {}
+[37.190774] (-) TimerEvent: {}
+[37.291800] (-) TimerEvent: {}
+[37.392841] (-) TimerEvent: {}
+[37.493859] (-) TimerEvent: {}
+[37.594863] (-) TimerEvent: {}
+[37.695954] (-) TimerEvent: {}
+[37.797151] (-) TimerEvent: {}
+[37.898209] (-) TimerEvent: {}
+[37.999255] (-) TimerEvent: {}
+[38.100306] (-) TimerEvent: {}
+[38.202046] (-) TimerEvent: {}
+[38.303150] (-) TimerEvent: {}
+[38.404190] (-) TimerEvent: {}
+[38.505358] (-) TimerEvent: {}
+[38.606492] (-) TimerEvent: {}
+[38.707542] (-) TimerEvent: {}
+[38.808781] (-) TimerEvent: {}
+[38.909797] (-) TimerEvent: {}
+[39.012885] (-) TimerEvent: {}
+[39.113623] (-) TimerEvent: {}
+[39.215464] (-) TimerEvent: {}
+[39.316405] (-) TimerEvent: {}
+[39.417769] (-) TimerEvent: {}
+[39.518980] (-) TimerEvent: {}
+[39.619895] (-) TimerEvent: {}
+[39.669190] (micro_ros_agent) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_typesupport.cpp.o\x1b[0m\n'}
+[39.720080] (-) TimerEvent: {}
+[39.821086] (-) TimerEvent: {}
+[39.922007] (-) TimerEvent: {}
+[40.022624] (-) TimerEvent: {}
+[40.123530] (-) TimerEvent: {}
+[40.224806] (-) TimerEvent: {}
+[40.325708] (-) TimerEvent: {}
+[40.426778] (-) TimerEvent: {}
+[40.528495] (-) TimerEvent: {}
+[40.631409] (-) TimerEvent: {}
+[40.732647] (-) TimerEvent: {}
+[40.834406] (-) TimerEvent: {}
+[40.935391] (-) TimerEvent: {}
+[41.036362] (-) TimerEvent: {}
+[41.137346] (-) TimerEvent: {}
+[41.238362] (-) TimerEvent: {}
+[41.339393] (-) TimerEvent: {}
+[41.440431] (-) TimerEvent: {}
+[41.541495] (-) TimerEvent: {}
+[41.642542] (-) TimerEvent: {}
+[41.743392] (-) TimerEvent: {}
+[41.844602] (-) TimerEvent: {}
+[41.945712] (-) TimerEvent: {}
+[42.046713] (-) TimerEvent: {}
+[42.147721] (-) TimerEvent: {}
+[42.248701] (-) TimerEvent: {}
+[42.349719] (-) TimerEvent: {}
+[42.450698] (-) TimerEvent: {}
+[42.551670] (-) TimerEvent: {}
+[42.652682] (-) TimerEvent: {}
+[42.753866] (-) TimerEvent: {}
+[42.854858] (-) TimerEvent: {}
+[42.955869] (-) TimerEvent: {}
+[43.056883] (-) TimerEvent: {}
+[43.157865] (-) TimerEvent: {}
+[43.258863] (-) TimerEvent: {}
+[43.359824] (-) TimerEvent: {}
+[43.461908] (-) TimerEvent: {}
+[43.565894] (-) TimerEvent: {}
+[43.666533] (-) TimerEvent: {}
+[43.770893] (-) TimerEvent: {}
+[43.871575] (-) TimerEvent: {}
+[43.974630] (-) TimerEvent: {}
+[44.076863] (-) TimerEvent: {}
+[44.177463] (-) TimerEvent: {}
+[44.278098] (-) TimerEvent: {}
+[44.379123] (-) TimerEvent: {}
+[44.480949] (-) TimerEvent: {}
+[44.581984] (-) TimerEvent: {}
+[44.683027] (-) TimerEvent: {}
+[44.784174] (-) TimerEvent: {}
+[44.885270] (-) TimerEvent: {}
+[44.986046] (-) TimerEvent: {}
+[45.086841] (-) TimerEvent: {}
+[45.187477] (-) TimerEvent: {}
+[45.288760] (-) TimerEvent: {}
+[45.390359] (-) TimerEvent: {}
+[45.491060] (-) TimerEvent: {}
+[45.592084] (-) TimerEvent: {}
+[45.693083] (-) TimerEvent: {}
+[45.794097] (-) TimerEvent: {}
+[45.895126] (-) TimerEvent: {}
+[45.996152] (-) TimerEvent: {}
+[46.097252] (-) TimerEvent: {}
+[46.198404] (-) TimerEvent: {}
+[46.299401] (-) TimerEvent: {}
+[46.400537] (-) TimerEvent: {}
+[46.501837] (-) TimerEvent: {}
+[46.602457] (-) TimerEvent: {}
+[46.703425] (-) TimerEvent: {}
+[46.804417] (-) TimerEvent: {}
+[46.905558] (-) TimerEvent: {}
+[47.006592] (-) TimerEvent: {}
+[47.107619] (-) TimerEvent: {}
+[47.208988] (-) TimerEvent: {}
+[47.310896] (-) TimerEvent: {}
+[47.413919] (-) TimerEvent: {}
+[47.433210] (micro_ros_agent) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/utils/demangle.cpp.o\x1b[0m\n'}
+[47.514080] (-) TimerEvent: {}
+[47.615043] (-) TimerEvent: {}
+[47.717856] (-) TimerEvent: {}
+[47.819880] (-) TimerEvent: {}
+[47.920871] (-) TimerEvent: {}
+[48.022816] (-) TimerEvent: {}
+[48.125356] (-) TimerEvent: {}
+[48.226878] (-) TimerEvent: {}
+[48.327847] (-) TimerEvent: {}
+[48.428853] (-) TimerEvent: {}
+[48.530882] (-) TimerEvent: {}
+[48.632908] (-) TimerEvent: {}
+[48.733901] (-) TimerEvent: {}
+[48.836931] (-) TimerEvent: {}
+[48.938920] (-) TimerEvent: {}
+[49.022165] (micro_ros_agent) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable micro_ros_agent\x1b[0m\n'}
+[49.041150] (-) TimerEvent: {}
+[49.142858] (-) TimerEvent: {}
+[49.244017] (-) TimerEvent: {}
+[49.344662] (-) TimerEvent: {}
+[49.445344] (-) TimerEvent: {}
+[49.546644] (-) TimerEvent: {}
+[49.647531] (-) TimerEvent: {}
+[49.749090] (-) TimerEvent: {}
+[49.851096] (-) TimerEvent: {}
+[49.952007] (-) TimerEvent: {}
+[50.053308] (-) TimerEvent: {}
+[50.154632] (-) TimerEvent: {}
+[50.255841] (-) TimerEvent: {}
+[50.356416] (-) TimerEvent: {}
+[50.457044] (-) TimerEvent: {}
+[50.557674] (-) TimerEvent: {}
+[50.659564] (-) TimerEvent: {}
+[50.757472] (micro_ros_agent) StdoutLine: {'line': b'[100%] Built target micro_ros_agent\n'}
+[50.760665] (-) TimerEvent: {}
+[50.799343] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[50.861895] (-) TimerEvent: {}
+[50.963264] (-) TimerEvent: {}
+[50.988518] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'install'}
+[51.031329] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent'], 'cwd': '/home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'habibashaker'), ('LC_TIME', 'ar_EG.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/habibashaker/ros2_ws/install/my_robot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/habibashaker'), ('OLDPWD', '/home/habibashaker/AP25_Stepper_RnD/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ar_EG.UTF-8'), ('MANAGERPID', '1277'), ('SYSTEMD_EXEC_PID', '1443'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '22329'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/habibashaker/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'habibashaker'), ('JOURNAL_STREAM', '8:11928'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'habibashaker'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/habibashaker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/habibashaker-Lenovo-G50-30:@/tmp/.ICE-unix/1423,unix/habibashaker-Lenovo-G50-30:/tmp/.ICE-unix/1423'), ('INVOCATION_ID', '554b6f8575f64260a944e0cca7e45446'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ar_EG.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ar_EG.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CDHWU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/habibashaker/ros2_ws/install/my_robot_bringup:/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all:/home/habibashaker/ros2_ws/install/my_robot_interfaces:/home/habibashaker/ros2_ws/install/my_py_pkg:/home/habibashaker/ros2_ws/install/my_cpp_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ar_EG.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:26d59b8f-89a8-4d85-ba0a-c9d5e7baad07'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ar_EG.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ar_EG.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/habibashaker/AP25_Stepper_RnD/build/micro_ros_agent'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/habibashaker/ros2_ws/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/home/habibashaker/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ar_EG.UTF-8'), ('LC_PAPER', 'ar_EG.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/habibashaker/ros2_ws/install/my_robot_bringup:/home/habibashaker/ros2_ws/install/my_robot_interfaces:/home/habibashaker/ros2_ws/install/my_cpp_pkg:/home/habibashaker/ros2_ws/install/turtlesim_catch_them_all:/home/habibashaker/ros2_ws/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[51.064890] (-) TimerEvent: {}
+[51.067485] (micro_ros_agent) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[51.070097] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/ament_index/resource_index/package_run_dependencies/micro_ros_agent\n'}
+[51.074364] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/ament_index/resource_index/parent_prefix_path/micro_ros_agent\n'}
+[51.076917] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.sh\n'}
+[51.078379] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.dsv\n'}
+[51.081156] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/environment/path.sh\n'}
+[51.082981] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/environment/path.dsv\n'}
+[51.083468] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/local_setup.bash\n'}
+[51.085683] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/local_setup.sh\n'}
+[51.086352] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/local_setup.zsh\n'}
+[51.088970] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/local_setup.dsv\n'}
+[51.089757] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/package.dsv\n'}
+[51.091750] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/ament_index/resource_index/packages/micro_ros_agent\n'}
+[51.095719] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[51.100627] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig.cmake\n'}
+[51.101251] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig-version.cmake\n'}
+[51.103915] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/package.xml\n'}
+[51.104405] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent\n'}
+[51.118192] (micro_ros_agent) StdoutLine: {'line': b'-- Set runtime path of "/home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent" to ""\n'}
+[51.120787] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/launch\n'}
+[51.121321] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/habibashaker/AP25_Stepper_RnD/install/micro_ros_agent/share/micro_ros_agent/launch/micro_ros_agent_launch.py\n'}
+[51.134951] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[51.165699] (-) TimerEvent: {}
+[51.268035] (-) TimerEvent: {}
+[51.368767] (-) TimerEvent: {}
+[51.442886] (micro_ros_agent) JobEnded: {'identifier': 'micro_ros_agent', 'rc': 0}
+[51.447789] (-) EventReactorShutdown: {}
