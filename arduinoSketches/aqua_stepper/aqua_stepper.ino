@@ -9,6 +9,11 @@
 #include <AccelStepper.h>
 #include <std_msgs/msg/int32.h>
 
+// Pin definitions
+#define stepPin 4
+#define dirPin 2
+//#define home_switch 9
+
 // Stepper configuration
 AccelStepper aquaStepper(AccelStepper::DRIVER, stepPin, dirPin);
 
@@ -21,10 +26,7 @@ rcl_allocator_t allocator;
 rcl_node_t node;
 
 
-// Pin definitions
-#define stepPin 2
-#define dirPin 4
-#define home_switch 9
+
 
 #define steps 200  // Steps per revolution for the motor (360/1.8 degrees)
 
@@ -34,15 +36,26 @@ rcl_node_t node;
 long current_position = 0;   // Current position in steps
 long target_position = 0;    // Target position in degrees
 long target_steps = 0;       // Target position in steps
-bool homing_state = false;   // Homing state
+// bool homing_state = false;   // Homing state
 
+
+
+
+void error_loop() {
+  while(true){
+   Serial.println("Error occurred! Entering error loop...");
+   delay(50);
+  }
+}
 
 // RCCHECK macro to check return values
-// #define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if ((temp_rc != RCL_RET_OK)) { error_loop(); } }
-// #define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if ((temp_rc != RCL_RET_OK)) {} }
+#define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if ((temp_rc != RCL_RET_OK)) { error_loop(); } }
+#define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if ((temp_rc != RCL_RET_OK)) {} }
+
+// 
 
 // Function to handle errors
-// void error_loop() {
+// {
 //   while (1) {
 //     digitalWrite(LED_PIN, !digitalRead(LED_PIN));
 //     delay(100);
@@ -56,82 +69,95 @@ long degToSteps(long degrees) {
 }
 
 // Homing motor function
-void homeMotor() {
-  if (!homing_state) {
-    // Start homing process
-    aquaStepper.setSpeed(100);  // Set speed for homing
-    if (digitalRead(home_switch) == HIGH) {
-      aquaStepper.move(-1); // Move backward until the switch is pressed
-      aquaStepper.runSpeed(); // Run continuously at the set speed
-    } else {
-      // Homing completed
-      aquaStepper.stop();  // Stop the motor
-      current_position = 0;  // Set home position to 0 steps
-      aquaStepper.setCurrentPosition(0);  // Mark stepper at position 0
-      homing_state = true;  // Set homing state to true
-    }
-  }
-}
+// void homeMotor() {
+//   if (!homing_state) {
+//     // Start homing process
+//     aquaStepper.setSpeed(100);  // Set speed for homing
+//     if (digitalRead(home_switch) == HIGH) {
+//       aquaStepper.move(-1); // Move backward until the switch is pressed
+//       aquaStepper.runSpeed(); // Run continuously at the set speed
+//     } else {
+//       // Homing completed
+//       aquaStepper.stop();  // Stop the motor
+//       current_position = 0;  // Set home position to 0 steps
+//       aquaStepper.setCurrentPosition(0);  // Mark stepper at position 0
+//       homing_state = true;  // Set homing state to true
+//     }
+//   }
+// }
 
 // ROS 2 subscription callback
 void subscription_callback(const void *msgin) {
   const std_msgs__msg__Int32 *msg = (const std_msgs__msg__Int32 *)msgin;
-  if (homing_state) {  // Only move if homing is complete
+  Serial.print("received:");
+  Serial.println(msg->data);
+
+  // if (homing_state) {  // Only move if homing is complete
     long new_position = msg->data;  // Get the new position in degrees
-    target_position = current_position + new_position;  // Add new position to current position
-    target_steps = degToSteps(target_position);  // Convert total degrees to steps
-    aquaStepper.moveTo(target_steps);  // Move stepper to the new total target
-    current_position = target_position;
-  }
+    target_steps = degToSteps(new_position);  // Convert new position to steps
+    aquaStepper.moveTo(target_steps);  // Move stepper by the new steps
+
+  //   target_position = current_position + new_position;  // Add new position to current position
+  //   target_steps = degToSteps(target_position);  // Convert total degrees to steps
+  //   aquaStepper.moveTo(target_steps);  // Move stepper to the new total target
+  //   current_position = target_position;
+  // // }
 }
   
 
 
 void setup() {
+
+  Serial.begin(115200);
+
   // Initialize micro-ROS
   set_microros_transports();
 
+  delay(1000);
+
   // Pin setup
-  pinMode(home_switch, INPUT_PULLUP);  // Setup home switch pin
+  // pinMode(home_switch, INPUT_PULLUP);  // Setup home switch pin
   // pinMode(LED_PIN, OUTPUT);
 
   // Stepper motor setup
   aquaStepper.setMaxSpeed(1000);
-  aquaStepper.setAcceleration(500);
+  aquaStepper.setSpeed(50);
+  aquaStepper.setAcceleration(150);
 
   // Initialize allocator and support
   allocator = rcl_get_default_allocator();
 
   // Create init options
-  rclc_support_init(&support, 0, NULL, &allocator);
+  RCCHECK(rclc_support_init(&support, 0, NULL, &allocator));
 
   // Create node
-  rclc_node_init_default(&node, "micro_ros_arduino_node", "", &support);
+  RCCHECK(rclc_node_init_default(&node, "aqua_stepper_node", "", &support));
+
 
   // Create subscriber
-  rclc_subscription_init_default(
+  RCCHECK(rclc_subscription_init_default(
     &subscriber,
     &node,
     ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
     "stepper_control"
-  );
+  ));
 
   // Create executor
-  rclc_executor_init(&executor, &support.context, 1, &allocator);
-  rclc_executor_add_subscription(&executor, &subscriber, &msg, &subscription_callback, ON_NEW_DATA);
+  RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
+  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber, &msg, &subscription_callback, ON_NEW_DATA));
 
   // Start homing process
-  homeMotor();
+  // homeMotor();
 }
 
 void loop() {
   // Spin executor to process any incoming messages
-  rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
+  RCCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
 
   // Continue homing process if not completed
-  if (!homing_state) {
-    homeMotor();  // Keep homing until the limit switch is pressed
-  }
+  // if (!homing_state) {
+  //   homeMotor();  // Keep homing until the limit switch is pressed
+  // }
 
   // Run the stepper to move towards the target
   aquaStepper.run();
