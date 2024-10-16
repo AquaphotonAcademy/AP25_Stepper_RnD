@@ -3,51 +3,62 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int32
 from sensor_msgs.msg import Joy
-from rclpy.duration import Duration
+
 
 class StepperNode(Node): 
     def __init__(self):
         super().__init__("stepper_node")   
-        self.stepper_publisher = self.create_publisher(Int32, "stepper_control", 10)
-        self.joy_subscriber = self.create_subscription(Joy, "/joy", self.joy_callback, 10)
-        # self.timer = self.create_timer(1.0, self.publish_command)
+
+        #publisher for controlling the stepper motor
+        self.stepper_publisher = self.create_publisher(Int32, "stepper_control", 10)  
+
+        #subscriber to receive joystick input
+        self.joy_subscriber = self.create_subscription(Joy, "/joy", self.joy_callback, 10) 
+
         self.get_logger().info("Stepper node has been started")
-        self.degrees = 0
-        self.last_press_time = self.get_clock().now()  
-        self.debounce_duration = Duration(seconds=0.5) 
+
+        # Initialize the motor position in degrees
+        self.degrees = 0 
+
+        #last buttons state
+        self.last_x =  0
+        self.last_o =  0
 
     def joy_callback(self, msg):
-         
-        current_time = self.get_clock().now()
 
-        # Debouncing logic using ROS time
-        if current_time - self.last_press_time >= self.debounce_duration:
+        # Get the current state of the X and O buttons from the joystick
+        current_x = msg.buttons[0]
+        current_o = msg.buttons[1]
 
-            if msg.buttons[0] == 1 and msg.buttons[1] == 1:  
-                self.get_logger().info("Both buttons pressed, no movement.")
+        
+        # Check if both buttons are pressed
+        if current_x == 1 and current_o == 1:  
+            self.get_logger().info("Both buttons pressed, no movement.")
 
-            elif msg.buttons[0] == 1:
-                self.degrees += 10
-                self.last_press_time = current_time
+        #X button is pressed, increase the degree by 10
+        elif current_x == 1 and self.last_x == 0:
+            self.degrees += 10
+            self.get_logger().info(f"X button pressed. Degrees: {self.degrees}")
             
+            
+        #O button is pressed, decrease the degree by 10
+        elif current_o == 1 and self.last_o == 0:
+            self.degrees -= 10
+            self.get_logger().info(f"O button pressed. Degrees: {self.degrees}")
 
-            elif msg.buttons[1] == 1:
-                self.degrees -= 10
-                self.last_press_time = current_time
+        #update last button state
+        self.last_x = current_x
+        self.last_o = current_o
 
-            msg_angle = Int32()
-            msg_angle.data = self.degrees
-            self.stepper_publisher.publish(msg_angle)
-            # self.get_logger().info(f"Stepper motor position: {self.degrees} ")
+        msg_angle = Int32()
+        msg_angle.data = 90
+        # msg_angle.data = self.degrees
+        self.stepper_publisher.publish(msg_angle)
+        # self.get_logger().info(f"Stepper motor position: {self.degrees} ")
 
+        
+        
 
-
-    # def publish_command(self):
-    #     degrees= 20
-    #     msg = Int32()
-    #     msg.data = degrees
-
-    #     self.stepper_publisher.publish(msg)
         
 
 
