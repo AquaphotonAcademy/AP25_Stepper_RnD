@@ -27,39 +27,29 @@ class StepperNode(Node):
     def joy_callback(self, msg):
 
         # Get the current state of the X and O buttons from the joystick
-        current_x = msg.buttons[0]
-        current_o = msg.buttons[1]
+        ccw_x = msg.buttons[0]
+        cw_o = msg.buttons[1]
+        msg = Int32()
 
         
         # Check if both buttons are pressed
-        if current_x == 1 and current_o == 1:  
+        if ccw_x == 1 and cw_o == 1:  
             self.get_logger().info("Both buttons pressed, no movement.")
 
-        #X button is pressed, increase the degree by 10
-        elif current_x == 1 and self.last_x == 0:
-            self.degrees += 10
-            self.get_logger().info(f"X button pressed. Degrees: {self.degrees}")
+        #X button is pressed, move cw
+        elif ccw_x == 1 and self.last_x == 0:
+            msg.data  = 1
+        
             
-            
-        #O button is pressed, decrease the degree by 10
-        elif current_o == 1 and self.last_o == 0:
-            self.degrees -= 10
-            self.get_logger().info(f"O button pressed. Degrees: {self.degrees}")
+        #O button is pressed, move ccw
+        elif cw_o == 1 and self.last_o == 0:
+            msg.data = -1
+        
 
         #update last button state
-        self.last_x = current_x
-        self.last_o = current_o
-
-        msg_angle = Int32()
-        msg_angle.data = 90
-        # msg_angle.data = self.degrees
-        self.stepper_publisher.publish(msg_angle)
-        # self.get_logger().info(f"Stepper motor position: {self.degrees} ")
-
-        
-        
-
-        
+        self.last_x = ccw_x
+        self.last_o = cw_o
+        self.stepper_publisher.publish(msg)
 
 
 def main(args=None):
