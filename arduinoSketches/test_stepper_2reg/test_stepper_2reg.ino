@@ -1,66 +1,82 @@
 // Define pin connections for the shift registers
-#define dataPin 48   // 74HC595 Data pin (DS)
-#define clockPin 47 // 74HC595 Clock pin (SHCP)
-#define latchPin 21  // 74HC595 Latch pin (STCP)
+#define dataPin 13   // 74HC595 Data pin (DS)
+#define clockPin 12  // 74HC595 Clock pin (SHCP)
+#define latchPin 14  // 74HC595 Latch pin (STCP)
 
-#define steps 100      // Number of steps per movement
-#define stepDelay 5    // Adjust for smoother motion
+#define steps 100     // Number of steps per movement
+#define stepDelay 5   // Minimal delay between steps (milliseconds)
+
+// Variable to store the first shift register's value
+uint8_t firstRegisterValue = 128;  // Binary: 10000000 (example value)
 
 void setup() {
   Serial.begin(9600);  // Initialize serial communication for debugging
-  
-  // Set the shift register pins as output
+
+  // Set the shift register pins as outputs
   pinMode(dataPin, OUTPUT);
   pinMode(clockPin, OUTPUT);
   pinMode(latchPin, OUTPUT);
 
-  digitalWrite(latchPin, LOW);  // Start with latch pin low to prevent updates
-  // shiftOut16(0);  // Clear both shift registers by sending zero
-  shiftOut(dataPin, clockPin, MSBFIRST, 0);
-  shiftOut(dataPin, clockPin, MSBFIRST, 0);
-
-  digitalWrite(latchPin, HIGH);  // Update the shift registers
+  // Initialize the first shift register with a predefined value
+  digitalWrite(latchPin, LOW); 
+  shiftOut(dataPin, clockPin, MSBFIRST, 0);  // Second register initialized with 0
+  shiftOut(dataPin, clockPin, MSBFIRST, firstRegisterValue);  // Load first register
+  digitalWrite(latchPin, HIGH);
 }
 
 void loop() {
-  moveStepper(steps, 0);  // Move the stepper motor clockwise
+  // Move the stepper motor counterclockwise
+  moveStepper(steps, 0);
   delay(500);  // Wait for half a second
   
-  moveStepper(steps, 1);  // Move the stepper motor counterclockwise
+  // Move the stepper motor clockwise
+  moveStepper(steps, 1);
   delay(500);  // Wait for half a second
 }
 
 // Function to move the stepper motor a specified number of steps
 void moveStepper(int stepCount, int dir) {
-  sendToShiftRegisters(dir, 0); // Set the direction before stepping
+  Serial.print("Setting direction: ");
+  Serial.println(dir == 1 ? "Clockwise" : "Counterclockwise");
 
+  // Set direction before stepping
+  sendToShiftRegisters(dir, 0);  
+
+  // Calculate second register value with initial state (STEP = 0)
+  uint8_t secondRegisterData = (dir << 3) | (1 << 2);  
+
+  // Print the register values in binary and decimal
+  Serial.print("First Register: ");
+  Serial.print(firstRegisterValue, BIN);  
+  Serial.print(" (Decimal: ");
+  Serial.print(firstRegisterValue, DEC);
+  Serial.print(") | Second Register: ");
+  Serial.print(secondRegisterData, BIN);
+  Serial.print(" (Decimal: ");
+  Serial.print(secondRegisterData, DEC);
+  Serial.println(")");
+
+  // Move the motor in a single sequence
   for (int i = 0; i < stepCount; i++) {
-    sendStepPulse(dir);  // Send a pulse to step the motor
-    delay(stepDelay);    // Delay between steps for smoother motion
+    sendStepPulse(dir);  // Send a step pulse
+    delay(stepDelay);    // Small delay between steps
   }
 }
 
-// // Function to send direction and step signals to the shift registers
- void sendToShiftRegisters(int dir, int step) {
- uint8_t data = (dir << 3) | (step << 2);  // Set DIR at bit 9 and STEP at bit 8, others are zero
-
- digitalWrite(latchPin, LOW);  // Prepare to latch the data
- shiftOut16(data);
- digitalWrite(latchPin, HIGH);  // Update the shift registers
+// Function to send direction and step signals to the shift registers
+void sendToShiftRegisters(int dir, int step) {
+  uint8_t secondRegisterData = (dir << 3) | (step << 2);  // DIR at bit 3, STEP at bit 2
+  
+  digitalWrite(latchPin, LOW);  // Prepare to latch the data
+  shiftOut(dataPin, clockPin, MSBFIRST, secondRegisterData);  // Send data to second register
+  shiftOut(dataPin, clockPin, MSBFIRST, firstRegisterValue);  // Keep first register value
+  digitalWrite(latchPin, HIGH);  // Update shift registers
 }
 
 // Function to generate step pulses properly by toggling the STEP pin
 void sendStepPulse(int dir) {  
   sendToShiftRegisters(dir, 1);  // Set STEP high
-  delayMicroseconds(200);         // Hold the STEP high for a short time
+  delayMicroseconds(200);        // Hold STEP high for a short duration
   sendToShiftRegisters(dir, 0);  // Set STEP low
-}
-
-// Function to shift out 16-bit data to two cascaded shift registers
-void shiftOut16(uint8_t data) {
-  // Send the high byte (bits 8-15) to the second shift register
-  shiftOut(dataPin, clockPin, MSBFIRST, data); 
-  
-  // Send the low byte (bits 0-7) to the first shift register (this will be all zeros)
-  shiftOut(dataPin, clockPin, MSBFIRST, 0);        
+  delayMicroseconds(200);        // Hold STEP low to complete the pulse
 }

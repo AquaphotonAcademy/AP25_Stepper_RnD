@@ -1,0 +1,24 @@
+[0.511s] Invoking command in '/home/habiba/AP25_Stepper_RnD/src/stepper_pkg': PYTHONPATH=/home/habiba/AP25_Stepper_RnD/build/stepper_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/habiba/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/stepper_pkg build --build-base /home/habiba/AP25_Stepper_RnD/build/stepper_pkg/build install --record /home/habiba/AP25_Stepper_RnD/build/stepper_pkg/install.log --single-version-externally-managed install_data
+[0.740s] running egg_info
+[0.741s] writing ../../build/stepper_pkg/stepper_pkg.egg-info/PKG-INFO
+[0.741s] writing dependency_links to ../../build/stepper_pkg/stepper_pkg.egg-info/dependency_links.txt
+[0.741s] writing entry points to ../../build/stepper_pkg/stepper_pkg.egg-info/entry_points.txt
+[0.741s] writing requirements to ../../build/stepper_pkg/stepper_pkg.egg-info/requires.txt
+[0.741s] writing top-level names to ../../build/stepper_pkg/stepper_pkg.egg-info/top_level.txt
+[0.743s] reading manifest file '../../build/stepper_pkg/stepper_pkg.egg-info/SOURCES.txt'
+[0.743s] writing manifest file '../../build/stepper_pkg/stepper_pkg.egg-info/SOURCES.txt'
+[0.744s] running build
+[0.744s] running build_py
+[0.744s] copying stepper_pkg/stepper_command.py -> /home/habiba/AP25_Stepper_RnD/build/stepper_pkg/build/lib/stepper_pkg
+[0.744s] running install
+[0.744s] running install_lib
+[0.745s] copying /home/habiba/AP25_Stepper_RnD/build/stepper_pkg/build/lib/stepper_pkg/stepper_command.py -> /home/habiba/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages/stepper_pkg
+[0.745s] byte-compiling /home/habiba/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages/stepper_pkg/stepper_command.py to stepper_command.cpython-310.pyc
+[0.746s] running install_data
+[0.746s] running install_egg_info
+[0.747s] removing '/home/habiba/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages/stepper_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[0.747s] Copying ../../build/stepper_pkg/stepper_pkg.egg-info to /home/habiba/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages/stepper_pkg-0.0.0-py3.10.egg-info
+[0.748s] running install_scripts
+[0.766s] Installing stepper_command script to /home/habiba/AP25_Stepper_RnD/install/stepper_pkg/lib/stepper_pkg
+[0.766s] writing list of installed files to '/home/habiba/AP25_Stepper_RnD/build/stepper_pkg/install.log'
+[0.784s] Invoked command in '/home/habiba/AP25_Stepper_RnD/src/stepper_pkg' returned '0': PYTHONPATH=/home/habiba/AP25_Stepper_RnD/build/stepper_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/habiba/AP25_Stepper_RnD/install/stepper_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/stepper_pkg build --build-base /home/habiba/AP25_Stepper_RnD/build/stepper_pkg/build install --record /home/habiba/AP25_Stepper_RnD/build/stepper_pkg/install.log --single-version-externally-managed install_data
